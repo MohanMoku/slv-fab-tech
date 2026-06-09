@@ -71,23 +71,39 @@ export default function Contact() {
                 <ContactForm contactForm={contactPage.contactForm} />
 
                 <h1 className="text-5xl md:text-7xl font-bold leading-tight whitespace-pre-line">Our Locations</h1>
-                <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-10 px-20">
+
+                <div className="grid grid-cols-1 md:grid-cols-2 w-full gap-6 md:gap-10 px-4 sm:px-8 lg:px-20">
+
                     <div className="w-full">
-                        <h3 className="text-xl font-semibold mb-10 text-center">Unit-1</h3>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6379359362822!2d77.50412837513132!3d13.006116314120527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d002deacd3d%3A0x4eecf4713097659c!2sSLV%20FAB%20TECH!5e1!3m2!1sen!2sin!4v1781012562144!5m2!1sen!2sin"
-                            width="600"
-                            height="450"
-                            className="rounded-2xl border w-full h-120 border-gray-200 p-6 shadow-sm"></iframe>
+                        <h3 className="text-lg md:text-xl font-semibold mb-6 md:mb-10 text-center">
+                            Unit-1
+                        </h3>
+
+                        <div className="w-full aspect-video">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3983.6379359362822!2d77.50412837513132!3d13.006116314120527!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d002deacd3d%3A0x4eecf4713097659c!2sSLV%20FAB%20TECH!5e1!3m2!1sen!2sin!4v1781012562144!5m2!1sen!2sin"
+                                className="w-full h-full rounded-2xl border border-gray-200 shadow-sm"
+                                loading="lazy"
+                                allowFullScreen
+                            />
+                        </div>
                     </div>
+
                     <div className="w-full">
-                        <h3 className="text-xl font-semibold mb-10 text-center">Unit-2</h3>
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6036.600114820664!2d77.49372324581671!3d13.013675976656266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d001fda7b97%3A0x80ecf5a9df188faf!2sSLV%20FAB%20TECH%20unit-2!5e1!3m2!1sen!2sin!4v1781012468012!5m2!1sen!2sin"
-                            width="600"
-                            height="450"
-                            className="rounded-2xl border w-full h-120 border-gray-200 p-6 shadow-sm"></iframe>
+                        <h3 className="text-lg md:text-xl font-semibold mb-6 md:mb-10 text-center">
+                            Unit-2
+                        </h3>
+
+                        <div className="w-full aspect-video">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6036.600114820664!2d77.49372324581671!3d13.013675976656266!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae3d001fda7b97%3A0x80ecf5a9df188faf!2sSLV%20FAB%20TECH%20unit-2!5e1!3m2!1sen!2sin!4v1781012468012!5m2!1sen!2sin"
+                                className="w-full h-full rounded-2xl border border-gray-200 shadow-sm"
+                                loading="lazy"
+                                allowFullScreen
+                            />
+                        </div>
                     </div>
+
                 </div>
 
             </section>

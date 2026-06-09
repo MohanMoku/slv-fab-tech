@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Belanosima, DM_Sans, Courier_Prime } from "next/font/google";
 import "./globals.css";
 import { ScrollProgress } from "@/components/ui/scroll-progress";
+import { Toaster } from "@/components/ui/sonner";
 
 const fontSans = Belanosima({
   subsets: ["latin"],
@@ -34,9 +35,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased p-4 h-dvh overflow-x-hidden mt-16`}>
+      <body className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased p-4 h-dvh overflow-x-hidden mt-26`}>
         {children}
         <ScrollProgress className="h-1.5" />
+        <Toaster />
       </body>
     </html>
   );

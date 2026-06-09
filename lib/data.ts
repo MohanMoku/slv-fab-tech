@@ -1,211 +1,5 @@
 import { Bot, CircuitBoard, Component, PackageOpen } from "lucide-react";
 
-export const siteConfig = {
-    company: "SLV Fab Tech",
-    tagline: "Expertise and Innovation in Fabrication Technology",
-    email: "suresh@slvfabtech.com",
-    phone: "+91 8618586276",
-    foundedYear: 2019,
-    employeeCount: 25,
-    factoryArea: "4,700 sq ft",
-    certification: "ISO 9001:2015",
-    units: [
-        {
-            label: "Unit 1",
-            address: "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091",
-        },
-        {
-            label: "Unit 2",
-            address: "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058",
-        },
-    ],
-    socialLinks: {
-        linkedin: "",
-        instagram: "",
-        whatsapp: "https://wa.me/918618586276",
-    },
-};
-
-export const navLinks = [
-    { label: "Home", href: "/" },
-    { label: "About", href: "/about" },
-    { label: "Services", href: "/services" },
-    { label: "Our Work", href: "/projects" },
-    { label: "Contact", href: "/contact" },
-];
-
-export const heroData = {
-    headline: "Precision Sheet Metal\nFabrication",
-    subheadline: "ISO 9001:2015 certified — laser cutting, bending, welding, and assembly for industrial applications.",
-    ctaPrimary: { label: "View Our Work", href: "/projects" },
-    ctaSecondary: { label: "Get a Quote", href: "/contact" },
-    backgroundImage: "/assets/hero-bg.jpg",
-    stats: [
-        { value: "2019", label: "Established" },
-        { value: "4,700", label: "Sq Ft Factory Area" },
-        { value: "25+", label: "Skilled Personnel" },
-        { value: "ISO", label: "9001:2015 Certified" },
-    ],
-};
-
-export interface Service {
-    id: string;
-    title: string;
-    description: string;
-    icon: string;           // Lucide icon name
-    specs: string[];        // Machine specs / capability bullets
-    imageUrl?: string;
-}
-
-export const services: Service[] = [
-    {
-        id: "laser-cutting",
-        title: "Laser Cutting",
-        description: "High-precision profiling with consistent edge quality for complex geometries and tight tolerances. Bed size: 1500 × 3000 mm.",
-        icon: "Zap",
-        specs: [
-            "Mild Steel — up to 16 mm",
-            "Stainless Steel — up to 8 mm",
-            "Aluminium — up to 5 mm",
-            "Bed size: 1500 × 3000 mm",
-        ],
-    },
-    {
-        id: "bending",
-        title: "Sheet Metal Bending",
-        description: "CNC press brake bending for accurate angles and repeatable results across complex profiles.",
-        icon: "GitBranch",
-        specs: [
-            "160 Ton capacity",
-            "Bending length: 3000 mm",
-            "MS — up to 6 mm",
-            "SS — up to 4 mm",
-            "Aluminium — up to 6 mm",
-            "Brass — up to 4 mm",
-        ],
-    },
-    {
-        id: "welding",
-        title: "Welding Services",
-        description: "TIG, MIG, and Laser welding for strong, precise joints across a range of materials and thicknesses.",
-        icon: "Flame",
-        specs: [
-            "TIG Welding",
-            "MIG Welding",
-            "Laser Welding",
-        ],
-    },
-    {
-        id: "riveting",
-        title: "Riveting",
-        description: "Hydraulic riveting for strong, reliable joints with consistent quality across various materials.",
-        icon: "Layers",
-        specs: [
-            "6 Ton capacity",
-            "Clinch Nut: M3 to M8",
-            "Clinch Standoff: M3 to M6",
-            "Clinch Stud: M3 to M8",
-            "Sheet thickness (upper): 0.8 mm",
-            "MS: 0.8 mm – 3 mm",
-            "SS: 0.8 mm – 2 mm",
-            "Aluminium: 1 mm – 4 mm",
-        ],
-    },
-    {
-        id: "assembly",
-        title: "Assembly",
-        description: "Complete assembly services combining fabricated components into finished sub-assemblies or end products.",
-        icon: "Settings2",
-        specs: [
-            "Sub-assembly & full assembly",
-            "Integrated with fabrication workflow",
-            "Reduces vendor touchpoints",
-            "Consistent quality end-to-end",
-        ],
-    },
-    {
-        id: "sheet-metal-fabrication",
-        title: "Sheet Metal Fabrication",
-        description: "End-to-end sheet metal fabrication — from raw material to finished component — for diverse industrial applications.",
-        icon: "Box",
-        specs: [
-            "Custom profiles and enclosures",
-            "Electrical panels & cabinets",
-            "Automation component housings",
-            "Packaging machine parts",
-        ],
-    },
-];
-
-export interface Project {
-    id: string;
-    title: string;
-    category: string;
-    description: string;
-    imageUrl: string;
-    tags: string[];
-}
-
-export const projects: Project[] = [
-    // Add real project photos from slides 11–13 of the company profile
-    // Image files go in: public/assets/projects/
-    {
-        id: "project-1",
-        title: "Sheet Metal Enclosure",
-        category: "Sheet Metal Fabrication",
-        description: "Precision fabricated enclosures for industrial use.",
-        imageUrl: "/assets/projects/project-1.jpg",
-        tags: ["Sheet Metal", "Enclosure"],
-    },
-];
-
-export const whyUsPoints = [
-    {
-        icon: "ShieldCheck",
-        title: "ISO 9001:2015 Certified",
-        description: "Structured Quality Management System ensuring consistent quality, traceability, and continual improvement.",
-    },
-    {
-        icon: "Layers",
-        title: "All Services Under One Roof",
-        description: "Laser cutting, bending, welding, riveting, and assembly — no multi-vendor coordination, faster lead times.",
-    },
-    {
-        icon: "Users",
-        title: "25+ Skilled Personnel",
-        description: "Trained operators, certified welders, and supervisors delivering precision at every production stage.",
-    },
-    {
-        icon: "Building2",
-        title: "Two Factory Units",
-        description: "4,700 sq ft of combined workspace in key Bengaluru industrial areas — Hegganahalli and Peenya.",
-    },
-    {
-        icon: "CheckCircle",
-        title: "Proactive Quality Control",
-        description: "Customer requirements reviewed pre-production. In-process and final inspections prevent defects.",
-    },
-    {
-        icon: "Handshake",
-        title: "Customer-Focused Service",
-        description: "Responsive communication and relationship-based service for quick clarifications and long-term partnerships.",
-    },
-];
-
-export const sectorsServed = [
-    { label: "Electrical", icon: "Zap" },
-    { label: "Automation", icon: "Settings2" },
-    { label: "Packaging", icon: "Package" },
-    { label: "Industrial", icon: "Factory" },
-];
-
-export const certifications = [
-    { name: "ISO 9001:2015", imageUrl: "/assets/certs/iso.png" },
-    { name: "GST Registered", imageUrl: "/assets/certs/gst.png" },
-];
-
-// Newwwwwwwww
-
 export const homeData = {
     headline: "Precision Sheet Metal Fabrication, Built to Last",
     subHeading: "ISO 9001:2015 Certified | Bengaluru's Trusted Fabrication Partner Since 2019",
@@ -319,6 +113,295 @@ export const aboutData = {
     ]
 };
 
+export const servicesPage = {
+    pageTitle: "Our Services & Capabilities",
+
+    intro:
+        "We offer a complete range of sheet metal fabrication services — from raw material to finished assembly — all under one roof. Every service follows ISO 9001:2015 process controls.",
+
+    services: [
+        {
+            id: "laser-cutting",
+            title: "Precision Laser Cutting",
+            description:
+                "SLV FAB TECH delivers precision fiber laser cutting with controlled manufacturing processes, ensuring high dimensional accuracy, consistent cut quality, and reliable performance across a wide range of materials.",
+
+            specifications: {
+                mildSteel: "up to 16 mm",
+                stainlessSteel: "up to 8 mm",
+                aluminium: "up to 5 mm",
+                processControl: "ISO 9001:2015 compliant",
+                qualityChecks: "Inspection checkpoints and material identification",
+                operatorMonitoring: "Continuous monitoring of cut quality, dimensional accuracy, and surface condition",
+                operatorTraining: "Trained operators ensure precision and process consistency"
+            },
+            imgUri: "/assets/my-laser.png"
+        },
+
+        {
+            id: "sheet-metal-bending",
+            title: "CNC Press Brake Bending",
+            description:
+                "Accurate angle bending and complex profile forming using a CNC press brake with 160-ton capacity and a 3000 mm bending length. Delivers repeatable, high-precision bends across Mild Steel, Stainless Steel, Aluminum, and Brass for a wide range of fabrication requirements.",
+
+            specifications: {
+                capacity: "160 Ton",
+                bendingLength: "3000 mm",
+                mildSteel: "up to 6 mm",
+                stainlessSteel: "up to 4 mm",
+                aluminium: "up to 6 mm",
+                brass: "up to 4 mm"
+            },
+            imgUri: "/assets/my-bending.png",
+        },
+
+        {
+            id: "riveting",
+            title: "Hydraulic Riveting",
+            description:
+                "Strong, reliable clinch joints with consistent quality. Suitable for a range of material types and thicknesses with fast cycle times for production efficiency.",
+
+            specifications: {
+                capacity: "6 Ton",
+
+                rivetingRange: {
+                    clinchNut: "M3 to M8",
+                    clinchStandoff: "M3 to M6",
+                    clinchStud: "M3 to M8"
+                },
+
+                rivetingSheetThickness: "Upper 0.8 mm",
+
+                material: {
+                    mildSteel: "0.8 mm to 3 mm",
+                    stainlessSteel: "0.8 mm to 2 mm",
+                    aluminium: "1 mm to 4 mm"
+                }
+            },
+            imgUri: "/assets/my-riveting.png",
+        },
+
+        {
+            id: "welding",
+            title: "TIG, MIG & Laser Welding",
+            description:
+                "Expert welding across all common industrial processes. TIG for precision and aesthetics, MIG for speed and strength, laser welding for heat-sensitive or fine-tolerance joints.",
+
+            processes: [
+                "Tungsten Inert Gas (TIG) Welding",
+                "Metal Inert Gas (MIG) Welding",
+                "Laser Welding"
+            ],
+            imgUri: "/assets/my-welding.png",
+        },
+
+        {
+            id: "assembly",
+            title: "Complete Product Assembly",
+            description:
+                "End-to-end assembly combining fabricated components into finished sub-assemblies or full products. Reduces your vendor count and ensures consistent fit and function.",
+            imgUri: "/assets/assemble.png",
+        }
+    ],
+
+    callout: {
+        title: "Why One-Stop Fabrication Matters",
+        description:
+            "When cutting, bending, welding, and assembly happen in the same facility under the same quality system, lead times shrink, coordination errors disappear, and you always know who's accountable."
+    }
+};
+
+export const projectPage = {
+    title: "Our Work",
+    intro: "A selection of fabricated components, assemblies, and precision parts produced at our Bengaluru facilities. Every project reflects our commitment to tight tolerances and clean finishes.",
+    projects: [
+        {
+            id: 1,
+            title: "Precision Laser Cutting",
+            description:
+                "High-accuracy fiber laser cutting for complex profiles with smooth edge quality and minimal material waste.",
+            images: [
+                "/assets/db/image1.png",
+                "/assets/db/image11.png",
+                "/assets/db/image21.png",
+            ],
+        },
+        {
+            id: 2,
+            title: "CNC Press Brake Bending",
+            description:
+                "Accurate angle bending with repeatable results for mild steel, stainless steel, aluminum, and brass.",
+            images: [
+                "/assets/db/image3.png",
+                "/assets/db/image2.png",
+                "/assets/db/image12.png",
+                "/assets/db/image13.png",
+            ],
+        },
+        {
+            id: 3,
+            title: "Welding & Fabrication",
+            description:
+                "Strong and precise welding solutions for structural and industrial fabrication requirements.",
+            images: [
+                "/assets/db/image5.png",
+                "/assets/db/image6.png",
+                "/assets/db/image7.png",
+                "/assets/db/image8.png",
+                "/assets/db/image10.png",
+            ],
+        },
+        {
+            id: 4,
+            title: "Sheet Metal Forming",
+            description:
+                "Advanced sheet metal forming with high dimensional accuracy and smooth finishing.",
+            images: [
+                "/assets/db/image9.png",
+                "/assets/db/image19.png",
+                "/assets/db/image14.png",
+                "/assets/db/image17.png",
+            ],
+        },
+        {
+            id: 5,
+            title: "Industrial Fabrication",
+            description:
+                "End-to-end fabrication solutions for industrial components with strict quality control standards.",
+            images: [
+                "/assets/db/image20.png",
+                "/assets/db/image16.png",
+                "/assets/db/image15.png",
+                "/assets/db/image19.png",
+            ],
+        }
+    ],
+    cta: {
+        heading: "Have a project in mind?",
+        subtext: "Send us your drawings or specifications and we'll get back to you with a quote within 24 hours",
+    }
+
+}
+
+export const gallery = [
+    {
+        id: "1",
+        img: "/assets/db/image1.png",
+        height: 400,
+    },
+    {
+        id: "2",
+        img: "/assets/db/image2.png",
+        height: 500,
+    },
+    {
+        id: "3",
+        img: "/assets/db/image3.png",
+        height: 300,
+    },
+    {
+        id: "4",
+        img: "/assets/db/image4.png",
+        height: 450,
+    },
+    {
+        id: "5",
+        img: "/assets/db/image5.png",
+        height: 350,
+    },
+    {
+        id: "6",
+        img: "/assets/db/image6.png",
+        height: 520,
+    },
+    {
+        id: "7",
+        img: "/assets/db/image7.png",
+        height: 380,
+    },
+    {
+        id: "8",
+        img: "/assets/db/image8.png",
+        height: 610,
+    },
+    {
+        id: "9",
+        img: "/assets/db/image9.png",
+        height: 420,
+    },
+    {
+        id: "10",
+        img: "/assets/db/image10.png",
+        height: 480,
+    },
+    {
+        id: "11",
+        img: "/assets/db/image11.png",
+        height: 330,
+    },
+    {
+        id: "12",
+        img: "/assets/db/image12.png",
+        height: 560,
+    },
+    {
+        id: "13",
+        img: "/assets/db/image13.png",
+        height: 410,
+    },
+    {
+        id: "14",
+        img: "/assets/db/image14.png",
+        height: 470,
+    },
+    {
+        id: "15",
+        img: "/assets/db/image15.png",
+        height: 390,
+    },
+    {
+        id: "16",
+        img: "/assets/db/image16.png",
+        height: 530,
+    },
+    {
+        id: "17",
+        img: "/assets/db/image17.png",
+        height: 360,
+    },
+    {
+        id: "18",
+        img: "/assets/db/image18.png",
+        height: 600,
+    },
+    {
+        id: "19",
+        img: "/assets/db/image19.png",
+        height: 440,
+    },
+    {
+        id: "20",
+        img: "/assets/db/image20.png",
+        height: 510,
+    },
+    {
+        id: "21",
+        img: "/assets/db/image21.png",
+        height: 510,
+    },
+    {
+        id: "22",
+        img: "/assets/db/image22.png",
+        height: 510,
+    },
+    {
+        id: "23",
+        img: "/assets/db/image23.png",
+        height: 510,
+    },
+    
+];
+
 export const contactPage = {
     pageTitle: "Get in Touch",
 
@@ -334,13 +417,15 @@ export const contactPage = {
                 name: "Unit 1",
                 location: "Hegganahalli",
                 address:
-                    "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091"
+                    "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091",
+                uri: "google.com/maps"
             },
             {
                 name: "Unit 2",
                 location: "Peenya",
                 address:
-                    "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058"
+                    "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058",
+                uri: "google.com/maps"
             }
         ]
     },
@@ -400,23 +485,5 @@ export const contactPage = {
             provider: "Nodemailer",
             recipient: "suresh@slvfabtech.com"
         }
-    },
-
-    mapSection: {
-        title: "Our Locations",
-        locations: [
-            {
-                name: "Unit 1 — Hegganahalli",
-                address:
-                    "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091",
-                mapEmbedUrl: ""
-            },
-            {
-                name: "Unit 2 — Peenya",
-                address:
-                    "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058",
-                mapEmbedUrl: ""
-            }
-        ]
     }
 };

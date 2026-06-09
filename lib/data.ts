@@ -1,3 +1,4 @@
+import { Bot, CircuitBoard, Component, PackageOpen } from "lucide-react";
 
 export const siteConfig = {
     company: "SLV Fab Tech",
@@ -202,3 +203,220 @@ export const certifications = [
     { name: "ISO 9001:2015", imageUrl: "/assets/certs/iso.png" },
     { name: "GST Registered", imageUrl: "/assets/certs/gst.png" },
 ];
+
+// Newwwwwwwww
+
+export const homeData = {
+    headline: "Precision Sheet Metal Fabrication, Built to Last",
+    subHeading: "ISO 9001:2015 Certified | Bengaluru's Trusted Fabrication Partner Since 2019",
+    desc: "From laser cutting to complete assembly, SLV Fab Tech delivers high-precision sheet metal solutions for electrical, automation, and packaging industries. Accuracy you can measure. Quality you can trust.",
+    stats: [
+        { value: "2019", label: "Established" },
+        { value: "4,700", label: "Sq Ft Factory Area" },
+        { value: "25+", label: "Skilled Personnel" },
+        { value: "ISO", label: "9001:2015 Certified" },
+    ],
+    whatWeDo: [
+        {
+            title: "Precision Laser Cutting",
+            desc: "High-precision fiber laser cutting across Mild Steel, Stainless Steel, and Aluminium — up to a 1500×3000 mm bed size with tight tolerances.",
+            img: "/assets/laser.png"
+        },
+        {
+            title: "Bending & Welding",
+            desc: "CNC press brake bending up to 3000 mm length with 160-ton capacity, paired with TIG, MIG, and laser welding services.",
+            img: "/assets/welding.png"
+        },
+        {
+            title: "Assembly & Riveting",
+            desc: "End-to-end fabrication including hydraulic riveting and full product assembly — delivered as a complete, ready-to-use solution.",
+            img: "/assets/assemble.png"
+        }
+    ],
+    industriesWeServe: [
+        {
+            title: "Electrical & Control Panels",
+            icon: CircuitBoard,
+        },
+        {
+            title: "Industrial Automation",
+            icon: Bot
+        },
+        {
+            title: "Packaging Machinery",
+            icon: PackageOpen
+        },
+        {
+            title: "Precision Engineering Components",
+            icon: Component
+        }
+    ]
+}
+
+export const aboutData = {
+    pageTitle: "About SLV Fab Tech",
+
+    whoWeAre: {
+        description:
+            "SLV Fab Tech is an ISO 9001:2015 certified sheet metal fabrication company founded in 2019 and headquartered in Bengaluru, Karnataka. We specialize in precision laser cutting, bending, welding, riveting, and complete assembly — serving the electrical, automation, and packaging industries across the region.",
+        note:
+            "We operate under direct proprietor supervision, ensuring every order gets personal attention, accountability, and a commitment to quality that larger facilities can't always offer."
+    },
+
+    facilities: [
+        {
+            unit: "Unit 1 — Hegganahalli",
+            address:
+                "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091",
+            type: "Administrative and fabrication hub"
+        },
+        {
+            unit: "Unit 2 — Peenya",
+            address:
+                "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058",
+            type: "Primary fabrication and production floor"
+        }
+    ],
+
+    infrastructure: "Combined area of 4,700 sq. ft. — equipped for laser cutting, welding, bending, assembly, and material storage.",
+
+    team: {
+        strength: "25+",
+        description:
+            "A dedicated workforce of skilled personnel including CNC operators, certified welders, quality supervisors, and assembly technicians working in sync to meet project timelines without compromising precision."
+    },
+
+    qualityCommitment: {
+        isoCertified: "ISO 9001:2015",
+        systemDescription:
+            "Our Quality Management System governs every step from order review to final delivery. Documented processes, material traceability, and in-process inspection checkpoints ensure that every part leaving our facility meets specification.",
+        statutoryCompliance:
+            "Valid GST registration and full statutory compliance support transparent, auditable commercial transactions.",
+        image: ""
+    },
+
+    values: [
+        {
+            name: "Precision",
+            description:
+                "Every cut, bend, and weld is measured against spec — not approximated."
+        },
+        {
+            name: "Accountability",
+            description:
+                "Proprietor-led operations mean decisions happen fast and responsibility is clear."
+        },
+        {
+            name: "Reliability",
+            description:
+                "Consistent quality, on-time delivery, and honest communication on every order."
+        },
+        {
+            name: "Improvement",
+            description:
+                "We follow ISO discipline and continuously refine our processes to serve clients better."
+        }
+    ]
+};
+
+export const contactPage = {
+    pageTitle: "Get in Touch",
+
+    intro:
+        "Whether you have drawings ready or just an idea — we're happy to discuss your fabrication requirements. Reach out via the form, call us, or visit either of our Bengaluru facilities.",
+
+    contactDetails: {
+        email: "suresh@slvfabtech.com",
+        phone: "+91 86185 86276",
+
+        locations: [
+            {
+                name: "Unit 1",
+                location: "Hegganahalli",
+                address:
+                    "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091"
+            },
+            {
+                name: "Unit 2",
+                location: "Peenya",
+                address:
+                    "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058"
+            }
+        ]
+    },
+
+    contactForm: {
+        title: "Send an Enquiry",
+        submitButton: "Send Enquiry",
+
+        fields: [
+            {
+                name: "fullName",
+                label: "Full Name",
+                type: "text",
+                required: true
+            },
+            {
+                name: "companyName",
+                label: "Company Name",
+                type: "text",
+                required: false
+            },
+            {
+                name: "phoneNumber",
+                label: "Phone Number",
+                type: "tel",
+                required: true
+            },
+            {
+                name: "email",
+                label: "Email Address",
+                type: "email",
+                required: true
+            },
+            {
+                name: "serviceRequired",
+                label: "Service Required",
+                type: "select",
+                required: false,
+                options: [
+                    "Laser Cutting",
+                    "Bending",
+                    "Welding",
+                    "Riveting",
+                    "Assembly",
+                    "Other"
+                ]
+            },
+            {
+                name: "message",
+                label: "Message / Project Details",
+                type: "textarea",
+                required: true
+            }
+        ],
+
+        emailConfig: {
+            provider: "Nodemailer",
+            recipient: "suresh@slvfabtech.com"
+        }
+    },
+
+    mapSection: {
+        title: "Our Locations",
+        locations: [
+            {
+                name: "Unit 1 — Hegganahalli",
+                address:
+                    "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091",
+                mapEmbedUrl: ""
+            },
+            {
+                name: "Unit 2 — Peenya",
+                address:
+                    "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058",
+                mapEmbedUrl: ""
+            }
+        ]
+    }
+};

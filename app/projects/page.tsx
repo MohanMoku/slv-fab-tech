@@ -1,9 +1,10 @@
+"use client"
+
 import Footer from "@/components/custom-components/footer";
 import Navbar from "@/components/custom-components/navbar";
 import { projectPage } from "@/lib/data";
 import Image from "next/image";
 import Link from "next/link";
-import { Card, CardContent } from "@/components/ui/card"
 import {
     Carousel,
     CarouselContent,
@@ -11,8 +12,42 @@ import {
     CarouselNext,
     CarouselPrevious,
 } from "@/components/ui/carousel"
+import { useEffect, useState } from "react";
+import { supabase } from "@/lib/supabase";
+import { toast } from "sonner";
 
 export default function Project() {
+
+    const [loading, setLoading] = useState(false)
+    const [projects, setProjects] = useState([])
+
+    useEffect(() => {
+        const fetchProjects = async () => {
+            setLoading(true)
+            try {
+                const { data, error } = await supabase
+                    .from("projects")
+                    .select("*");
+                if (error) {
+                    throw error;
+                }                
+                if (data) {
+                    const shuffled = [...data].sort(() => Math.random() - 0.5);
+                    setProjects(shuffled as any || []);
+                }
+            } catch (error: any) {
+                toast.error("Failed to fetch", {
+                    description: error.message || "Something went wrong",
+                    duration: 5000,
+                })
+            } finally {
+                setLoading(false)
+            }
+        };
+
+        fetchProjects();
+    }, [])
+
     return (
         <>
             <Navbar color={""} />
@@ -27,11 +62,11 @@ export default function Project() {
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-10">
-                    {projectPage.projects.map((project, index) => (
+                    {projects.map((project: any, index: any) => (
                         <div key={index} className="bg-white rounded-2xl shadow-md hover:shadow-xl transition p-4 border">
                             <Carousel className="w-full max-w-sm mx-auto">
                                 <CarouselContent>
-                                    {project.images.map((img, index) => (
+                                    {project.images.map((img: any, index: any) => (
                                         <CarouselItem key={index}>
                                             <div className="relative w-full h-72 rounded-xl overflow-hidden">
                                                 <Image
@@ -72,6 +107,11 @@ export default function Project() {
 
             </section >
             <Footer color={""} />
+            {
+                loading && <div className="fixed inset-0 flex items-center justify-center bg-white/80 z-50">
+                    <div className="w-10 h-10 border-4 border-gray-300 border-t-black rounded-full animate-spin" />
+                </div>
+            }
         </>
     )
 }

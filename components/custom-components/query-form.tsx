@@ -20,6 +20,7 @@ type ContactFormProps = {
 export default function ContactForm({ contactForm }: ContactFormProps) {
     const [formData, setFormData] = useState<Record<string, string>>({});
     const [loading, setLoading] = useState(false);
+    const [btnDissable, setBtnDissable] = useState(false);
 
     const handleChange = (
         e: React.ChangeEvent<
@@ -35,6 +36,7 @@ export default function ContactForm({ contactForm }: ContactFormProps) {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setLoading(true)
+        setBtnDissable(true);
         try {
             const res = await fetch("/api/contact", {
                 method: "POST",
@@ -43,7 +45,6 @@ export default function ContactForm({ contactForm }: ContactFormProps) {
                 },
                 body: JSON.stringify(formData),
             });
-            const data = await res.json();
             if (res.ok)
                 toast.success("Form submitted successfully", {
                     description: "We will react You Soon.",
@@ -61,6 +62,9 @@ export default function ContactForm({ contactForm }: ContactFormProps) {
             })
         } finally {
             setLoading(false)
+            setTimeout(() => {
+                setBtnDissable(false);
+            }, 6000)
         }
     };
 
@@ -68,7 +72,7 @@ export default function ContactForm({ contactForm }: ContactFormProps) {
         <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-md my-10 w-full md:w-3/5">
 
             <h2 className="mb-6 text-2xl font-bold">
-                {contactForm.title}, <span className="text-blue-600">We will react you soon.</span>
+                {contactForm.title}, <span className="text-blue-600">We will reach you soon.</span>
             </h2>
 
             <form onSubmit={handleSubmit} className="space-y-5">
@@ -104,11 +108,32 @@ export default function ContactForm({ contactForm }: ContactFormProps) {
                                     </option>
                                 ))}
                             </select>
+                        ) : field.type === "tel" ? (
+                            <input
+                                type="tel"
+                                name={field.name}
+                                required={field.required}
+                                value={formData?.[field.name] || ""}
+                                onChange={(e) => {
+                                    let value = e.target.value;
+                                    value = value.replace(/\D/g, "");
+                                    if (value.length > 10) value = value.slice(0, 10);
+
+                                    e.target.value = value;
+                                    handleChange(e);
+                                }}
+                                minLength={10}
+                                maxLength={10}
+                                inputMode="numeric"
+                                pattern="[0-9]{10}"
+                                className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none"
+                            />
                         ) : (
                             <input
                                 type={field.type}
                                 name={field.name}
                                 required={field.required}
+                                value={formData?.[field.name] || ""}
                                 onChange={handleChange}
                                 className="w-full rounded-lg border border-gray-300 px-4 py-3 focus:border-blue-500 focus:outline-none"
                             />
@@ -117,10 +142,11 @@ export default function ContactForm({ contactForm }: ContactFormProps) {
                 ))}
 
                 <button
+                    disabled={btnDissable}
                     type="submit"
-                    className="w-full rounded-lg bg-blue-600 px-6 py-3 font-medium text-white transition hover:bg-blue-700"
+                    className={`w-full rounded-lg px-6 py-3 font-medium text-white transition ${btnDissable ? "bg-gray-400 cursor-not-allowed" : "bg-blue-600 hover:bg-blue-700"}`}
                 >
-                    {contactForm.submitButton}
+                    {btnDissable ? "Submitted..." : contactForm.submitButton}
                 </button>
             </form>
 

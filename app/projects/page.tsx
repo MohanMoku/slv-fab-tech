@@ -30,7 +30,7 @@ export default function Project() {
                     .select("*");
                 if (error) {
                     throw error;
-                }                
+                }
                 if (data) {
                     const shuffled = [...data].sort(() => Math.random() - 0.5);
                     setProjects(shuffled as any || []);
@@ -73,6 +73,7 @@ export default function Project() {
                                                     src={img}
                                                     alt={`${project.title} ${index + 1}`}
                                                     fill
+                                                    priority={index === 0}
                                                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                                     className="object-cover"
                                                 />

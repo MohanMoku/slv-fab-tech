@@ -29,14 +29,14 @@ export default function Home() {
           <div className="mt-8 sm:mt-10 flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/services"
-              className="px-6 sm:px-8 py-3 bg-white text-black font-semibold rounded-full hover:bg-gray-200 transition"
+              className="px-6 sm:px-8 py-3 font-semibold rounded-full transition bg-gray-700 text-white hover:bg-black hover:text-white"
             >
               Explore Our Services
             </Link>
 
             <Link
               href="/contact"
-              className="px-6 sm:px-8 py-3 border border-white font-semibold rounded-full hover:bg-white hover:text-black transition"
+              className="px-6 sm:px-8 py-3 border font-semibold rounded-full hover:bg-black hover:text-white transition"
             >
               Get a Quote
             </Link>

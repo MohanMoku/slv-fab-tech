@@ -97,7 +97,7 @@ const Navbar: React.FC<{ color?: string }> = ({ color = "" }) => {
             className={`fixed top-2 left-1/2 -translate-x-1/2 z-50 h-16 px-4 md:px-10 flex items-center justify-between ${color ? `text-${color}` : ""}`}
         >
             <img
-                src="/assets/rec logo.png"
+                src={pathname === "/" || pathname === "/services" ? "/assets/rec logo 2.png" : "/assets/rec logo.png"}
                 alt="logo"
                 className="w-28 md:w-40 object-contain"
             />
@@ -107,14 +107,14 @@ const Navbar: React.FC<{ color?: string }> = ({ color = "" }) => {
             </div>
 
             <button
-                className="md:hidden text-2xl"
+                className="md:hidden text-2xl text-black"
                 onClick={() => setMenuOpen(!menuOpen)}
             >
                 ☰
             </button>
 
             {menuOpen && (
-                <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-white/80 backdrop-blur-md rounded-xl p-5 flex flex-col gap-4 md:hidden text-center">
+                <div className="absolute top-20 left-1/2 -translate-x-1/2 w-[90%] bg-black/80 text-white backdrop-blur-md rounded-xl p-5 flex flex-col gap-4 md:hidden text-center">
                     {navLinks}
                 </div>
             )}

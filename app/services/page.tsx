@@ -65,7 +65,7 @@ export default function Services() {
                 playsInline
                 preload="auto"
             >
-                <source src="/assets/home-bg.mp4" type="video/mp4" />
+                <source src="/assets/service-bg.mp4" type="video/mp4" />
             </video>
 
             <div className="fixed inset-0 -z-10 bg-white/10" />

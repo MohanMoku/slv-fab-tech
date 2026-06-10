@@ -56,9 +56,21 @@ const renderSpecs = (specs: Record<string, any>) => {
 export default function Services() {
     return (
         <>
-            <Navbar color={""} />
+            <Navbar color={"white"} />
+            <video
+                className="fixed inset-0 -z-10 h-screen w-full object-cover blur-sm"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="auto"
+            >
+                <source src="/assets/home-bg.mp4" type="video/mp4" />
+            </video>
+
+            <div className="fixed inset-0 -z-10 bg-white/10" />
             <section className="relative w-full min-h-screen flex flex-col items-center justify-center">
-                <div className="relative z-10 max-w-5xl px-6 text-center py-20">
+                <div className="relative z-10 max-w-5xl px-6 text-center py-20 text-white">
                     <h1 className="text-5xl md:text-7xl font-bold leading-tight whitespace-pre-line">
                         {servicesPage.pageTitle}
                     </h1>
@@ -85,16 +97,16 @@ export default function Services() {
                                         />
                                     </div>
 
-                                    <div>
-                                        <span className="text-sm font-semibold uppercase tracking-wider text-blue-600">
+                                    <div className="text-white">
+                                        <span className="text-sm font-semibold uppercase tracking-wider text-purple-500">
                                             Service
                                         </span>
 
-                                        <h2 className="mt-2 text-4xl font-bold text-gray-900">
+                                        <h2 className="mt-2 text-4xl font-bold">
                                             {service.title}
                                         </h2>
 
-                                        <p className="mt-5 text-lg leading-relaxed text-gray-600">
+                                        <p className="mt-5 text-lg leading-relaxed">
                                             {service.description}
                                         </p>
 
@@ -107,7 +119,7 @@ export default function Services() {
 
                                         {service.specifications && (
                                             <div className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                                                <h3 className="mb-4 text-lg font-semibold">
+                                                <h3 className="mb-4 text-lg font-semibold text-black">
                                                     Specifications
                                                 </h3>
 
@@ -117,7 +129,7 @@ export default function Services() {
 
                                         {service.processes && (
                                             <div className="mt-8 rounded-2xl border border-gray-200 bg-gray-50 p-6">
-                                                <h3 className="mb-4 text-lg font-semibold">
+                                                <h3 className="mb-4 text-lg font-semibold text-black">
                                                     Processes Available
                                                 </h3>
 
@@ -128,7 +140,7 @@ export default function Services() {
                                                             className="flex items-center gap-3"
                                                         >
                                                             <span className="h-2 w-2 rounded-full bg-blue-600" />
-                                                            <span>{process}</span>
+                                                            <span className="text-gray-800">{process}</span>
                                                         </li>
                                                     ))}
                                                 </ul>
@@ -142,7 +154,7 @@ export default function Services() {
                     </div>
                 </div>
 
-                <div className="relative z-10 max-w-5xl px-6 text-center py-20">
+                <div className="relative z-10 max-w-5xl px-6 text-center py-20 text-white">
                     <h1 className="text-5xl md:text-7xl font-bold leading-tight whitespace-pre-line">
                         {servicesPage.callout.title}
                     </h1>
@@ -152,7 +164,7 @@ export default function Services() {
                 </div>
 
             </section>
-            <Footer color={""} />
+            <Footer color={"white"} />
         </>
     )
 }

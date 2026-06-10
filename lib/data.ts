@@ -1,4 +1,4 @@
-import { Bot, CircuitBoard, Component, PackageOpen } from "lucide-react";
+import { Bot, CircuitBoard, Component, Spline } from "lucide-react";
 
 export const homeData = {
     headline: "Precision Sheet Metal Fabrication, Built to Last",
@@ -12,14 +12,14 @@ export const homeData = {
     ],
     whatWeDo: [
         {
-            title: "Precision Laser Cutting",
+            title: "Laser Cutting",
             desc: "High-precision fiber laser cutting across Mild Steel, Stainless Steel, and Aluminium — up to a 1500×3000 mm bed size with tight tolerances.",
             img: "/assets/laser.png"
         },
         {
             title: "Bending & Welding",
             desc: "CNC press brake bending up to 3000 mm length with 160-ton capacity, paired with TIG, MIG, and laser welding services.",
-            img: "/assets/welding.png"
+            img: "/assets/bending.png"
         },
         {
             title: "Assembly & Riveting",
@@ -37,8 +37,8 @@ export const homeData = {
             icon: Bot
         },
         {
-            title: "Packaging Machinery",
-            icon: PackageOpen
+            title: "Pipeline Services",
+            icon: Spline
         },
         {
             title: "Precision Engineering Components",
@@ -52,7 +52,7 @@ export const aboutData = {
 
     whoWeAre: {
         description:
-            "SLV Fab Tech is an ISO 9001:2015 certified sheet metal fabrication company founded in 2019 and headquartered in Bengaluru, Karnataka. We specialize in precision laser cutting, bending, welding, riveting, and complete assembly — serving the electrical, automation, and packaging industries across the region.",
+            "SLV Fab Tech is an ISO 9001:2015 certified sheet metal fabrication company founded in 2019 and headquartered in Bengaluru, Karnataka. We specialize in laser cutting, bending, welding, riveting, and complete assembly — serving the electrical, automation, and packaging industries across the region.",
         note:
             "We operate under direct proprietor supervision, ensuring every order gets personal attention, accountability, and a commitment to quality that larger facilities can't always offer."
     },
@@ -122,18 +122,18 @@ export const servicesPage = {
     services: [
         {
             id: "laser-cutting",
-            title: "Precision Laser Cutting",
+            title: "Laser Cutting",
             description:
                 "SLV FAB TECH delivers precision fiber laser cutting with controlled manufacturing processes, ensuring high dimensional accuracy, consistent cut quality, and reliable performance across a wide range of materials.",
 
             specifications: {
-                mildSteel: "up to 16 mm",
-                stainlessSteel: "up to 8 mm",
-                aluminium: "up to 5 mm",
-                processControl: "ISO 9001:2015 compliant",
-                qualityChecks: "Inspection checkpoints and material identification",
-                operatorMonitoring: "Continuous monitoring of cut quality, dimensional accuracy, and surface condition",
-                operatorTraining: "Trained operators ensure precision and process consistency"
+                MildSteel: "up to 16 mm",
+                StainlessSteel: "up to 8 mm",
+                Aluminium: "up to 5 mm",
+                ProcessControl: "ISO 9001:2015 compliant",
+                QualityChecks: "Inspection checkpoints and material identification",
+                OperatorMonitoring: "Continuous monitoring of cut quality, dimensional accuracy, and surface condition",
+                OperatorTraining: "Trained operators ensure precision and process consistency"
             },
             imgUri: "/assets/my-laser.png"
         },
@@ -145,12 +145,12 @@ export const servicesPage = {
                 "Accurate angle bending and complex profile forming using a CNC press brake with 160-ton capacity and a 3000 mm bending length. Delivers repeatable, high-precision bends across Mild Steel, Stainless Steel, Aluminum, and Brass for a wide range of fabrication requirements.",
 
             specifications: {
-                capacity: "160 Ton",
-                bendingLength: "3000 mm",
-                mildSteel: "up to 6 mm",
-                stainlessSteel: "up to 4 mm",
-                aluminium: "up to 6 mm",
-                brass: "up to 4 mm"
+                Capacity: "160 Ton",
+                BendingLength: "3000 mm",
+                MildSteel: "up to 6 mm",
+                StainlessSteel: "up to 4 mm",
+                Aluminium: "up to 6 mm",
+                Brass: "up to 4 mm"
             },
             imgUri: "/assets/my-bending.png",
         },
@@ -165,17 +165,17 @@ export const servicesPage = {
                 capacity: "6 Ton",
 
                 rivetingRange: {
-                    clinchNut: "M3 to M8",
-                    clinchStandoff: "M3 to M6",
-                    clinchStud: "M3 to M8"
+                    ClinchNut: "M3 to M8",
+                    ClinchStandoff: "M3 to M6",
+                    ClinchStud: "M3 to M8"
                 },
 
-                rivetingSheetThickness: "Upper 0.8 mm",
+                RivetingSheetThickness: "Upper 0.8 mm",
 
-                material: {
-                    mildSteel: "0.8 mm to 3 mm",
-                    stainlessSteel: "0.8 mm to 2 mm",
-                    aluminium: "1 mm to 4 mm"
+                Material: {
+                    MildSteel: "0.8 mm to 3 mm",
+                    StainlessSteel: "0.8 mm to 2 mm",
+                    Aluminium: "1 mm to 4 mm"
                 }
             },
             imgUri: "/assets/my-riveting.png",
@@ -217,7 +217,7 @@ export const projectPage = {
     projects: [
         {
             id: 1,
-            title: "Precision Laser Cutting",
+            title: "Laser Cutting",
             description:
                 "High-accuracy fiber laser cutting for complex profiles with smooth edge quality and minimal material waste.",
             images: [

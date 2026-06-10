@@ -6,10 +6,23 @@ import React from "react";
 
 export default function Home() {
   return (
-    <div className="overflow-x-hidden">
+    <div className="overflow-x-hidden text-white">
       <Navbar color="" />
 
-      <div className="fixed inset-0 -z-10 bg-white/10" />
+      <video
+        className="fixed inset-0 -z-10 h-screen w-full object-cover blur-sm"
+        autoPlay
+        muted
+        loop
+        playsInline
+        preload="auto"
+      >
+        <source src="/assets/home-bg.mp4" type="video/mp4" />
+      </video>
+
+      {/* <img src="/assets/favicon.ico" alt="logo" className="fixed inset-0 -z-10 h-screen w-full object-cover blur-sm"/> */}
+
+      <div className="fixed inset-0 -z-10 bg-white/10"/>
 
       {/* HERO SECTION */}
       <section className="relative w-full min-h-screen flex items-center justify-center px-4 sm:px-6">

@@ -22,22 +22,6 @@ export default function Contact() {
                     <div className="mx-auto max-w-6xl px-6">
                         <div className="mb-10">
                             <h2 className="text-3xl font-bold">Contact Us</h2>
-
-                            <div className="mt-4 space-y-2">
-                                <a
-                                    href={`mailto:${contactPage.contactDetails.email}`}
-                                    className="block text-blue-600 hover:underline text-2xl"
-                                >
-                                    {contactPage.contactDetails.email}
-                                </a>
-
-                                <a
-                                    href={`tel:${contactPage.contactDetails.phone.replace(/\s/g, "")}`}
-                                    className="block text-blue-600 hover:underline text-2xl"
-                                >
-                                    {contactPage.contactDetails.phone}
-                                </a>
-                            </div>
                         </div>
 
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
@@ -46,9 +30,29 @@ export default function Contact() {
                                     key={unit.name}
                                     className="rounded-2xl border border-gray-200 p-6 shadow-sm"
                                 >
-                                    <h3 className="text-xl font-semibold">{unit.name}</h3>
+                                    <h3 className="text-xl font-semibold">{unit.title}</h3>
+                                    <div className="mt-4 space-y-2">
 
-                                    <p className="mt-1 text-sm text-blue-600">
+                                        <p className="mt-4 text-2xl underline">
+                                            {unit.name}
+                                        </p>
+
+                                        <a
+                                            href={`mailto:${unit.email}`}
+                                            className="block text-blue-600 hover:underline text-xl"
+                                        >
+                                            {unit.email}
+                                        </a>
+
+                                        <a
+                                            href={`tel:${unit.phone.replace(/\s/g, "")}`}
+                                            className="block text-blue-600 hover:underline text-xl"
+                                        >
+                                            {unit.phone}
+                                        </a>
+                                    </div>
+
+                                    <p className="mt-1 text-2xl text-blue-600">
                                         {unit.location}
                                     </p>
 

@@ -52,7 +52,7 @@ export const aboutData = {
 
     whoWeAre: {
         description:
-            "SLV Fab Tech is an ISO 9001:2015 certified sheet metal fabrication company founded in 2019 and headquartered in Bengaluru, Karnataka. We specialize in laser cutting, bending, welding, riveting, and complete assembly — serving the electrical, automation, and packaging industries across the region.",
+            "SLV Fab Tech is an ISO 9001:2015 certified sheet metal fabrication company founded in 2019 and headquartered in Bengaluru, Karnataka. We specialize in laser cutting, bending, welding, riveting, and complete assembly — serving the electrical, and automation across the region.",
         note:
             "We operate under direct proprietor supervision, ensuring every order gets personal attention, accountability, and a commitment to quality that larger facilities can't always offer."
     },
@@ -207,7 +207,7 @@ export const servicesPage = {
     callout: {
         title: "Why One-Stop Fabrication Matters",
         description:
-            "When cutting, bending, welding, and assembly happen in the same facility under the same quality system, lead times shrink, coordination errors disappear, and you always know who's accountable."
+            "When cutting, bending, welding, and assembly happen in the same facility under the same quality system, lead times shrink, coordination errors disappear."
     }
 };
 
@@ -399,7 +399,7 @@ export const gallery = [
         img: "/assets/db/image23.png",
         height: 510,
     },
-    
+
 ];
 
 export const contactPage = {
@@ -414,18 +414,24 @@ export const contactPage = {
 
         locations: [
             {
-                name: "Unit 1",
+                title: "Unit 1",
+                name: "Suresh",
+                email: "suresh@slvfabtech.com",
+                phone: "+91 86185 86276",
                 location: "Hegganahalli",
                 address:
                     "#14, 3rd Cross, Doddanna Industrial Estate, Hegganahalli, Bengaluru – 560091",
-                uri: "google.com/maps"
+                uri: "https://maps.app.goo.gl/r6iucFH5Lo9SQtQj9"
             },
             {
-                name: "Unit 2",
+                title: "Unit 2",
+                name: "Akhil",
+                email: "akhil@slvfabtech.com",
+                phone: "+91 84960 12211",
                 location: "Peenya",
                 address:
                     "#6/887, Thigalarapalya Main Road, 3rd Stage, Peenya, Bengaluru – 560058",
-                uri: "google.com/maps"
+                uri: "https://maps.app.goo.gl/tzXATEgcagPUFMg9A"
             }
         ]
     },
